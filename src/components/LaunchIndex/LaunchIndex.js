@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link, useParams } from 'react-router-dom';
-
+//fix Router
 import { Shoes } from "../Shoes/Shoes";
 
 export const LaunchIndex = () => {
@@ -27,6 +27,7 @@ export const LaunchShoe = () => {
 
   if (!shoe) {
     return <h2>Not Found!</h2>
+    
   }
 
   const { name, img } = shoe;
@@ -35,6 +36,7 @@ export const LaunchShoe = () => {
     <div>
       <h2>{name}</h2>
       <img src={img} alt={name} />
-    </div>
+      <Router></Router>
+      </div>
   );
 }
