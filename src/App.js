@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Outlet, useParams } from 'react-router-dom';
 
-// import { Shoes } from './components/Shoes/Shoes';
+import { Shoes } from './components/Shoes/Shoes';
 import { Home } from './components/Home/Home';
-import { LaunchIndex, LaunchShoe } from './components/LaunchIndex/LaunchIndex';
+import {  } from './components/LaunchIndex/LaunchIndex';
 import { NotFound } from './components/NotFound/NotFound';
 
 
@@ -40,6 +40,45 @@ function Launch() {
     </div>
   )
 }
+
+const LaunchIndex = () => {
+  return (
+    <div className="wrapperLI">
+    <p className="categories">hi</p>
+    <ul>
+      {Object.entries(Shoes).map(([slug, { name, img }]) => (
+        <li className="launchShoes" key={slug}>
+          <Link to={`/launch/${slug}`}>
+            <img className="launchPics" src={img} alt={name} />
+            <h3 className="launchHeader">{name}</h3>
+          </Link>
+        </li>
+      ))}
+    </ul>
+    </div>
+  );
+};
+
+
+const LaunchShoe = () => {
+  const { slug } = useParams();
+  const shoe = Shoes[slug];
+
+  if (!shoe) {
+    return <h2>Not Found!</h2>
+    
+  }
+
+  const { name, img } = shoe;
+
+  return (
+    <div>
+      <h2>{name}</h2>
+      <img src={img} alt={name} />
+      </div>
+  );
+}
+
 
 export default App;
 /* <img className="img1" src={shoes["nike-air-zoom-pegasus"].img} alt="Nike Air Zoom Pegasus" /> */
