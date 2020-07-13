@@ -17,6 +17,7 @@ function App() {
       <nav>
         <Link to="/">Home</Link>
         <Link to="/launch">Products</Link>
+        sdsdsda
       </nav>
 
       <Routes>
@@ -34,7 +35,7 @@ function App() {
 function Launch() {
   return (
     <div>
-      <h1 className="productsMain">Our Products</h1>
+      {/* <h1 className="productsMain">Our Collection</h1> */}
 
       <Outlet />
     </div>
@@ -44,13 +45,14 @@ function Launch() {
 const LaunchIndex = () => {
   return (
     <div className="wrapperLI">
-    <p className="categories">hi</p>
+    <p className="runningTitle">Running Shoes</p>
     <ul>
-      {Object.entries(Shoes).map(([slug, { name, img }]) => (
+      {Object.entries(Shoes).map(([slug, { name, img, price }]) => (
         <li className="launchShoes" key={slug}>
           <Link to={`/launch/${slug}`}>
             <img className="launchPics" src={img} alt={name} />
             <h3 className="launchHeader">{name}</h3>
+            <p className="price">USD {price}</p>
           </Link>
         </li>
       ))}

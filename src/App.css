@@ -1,3 +1,7 @@
+body {
+  background-color: #535353;
+}
+
 nav {
   background: #333333;
 }
@@ -37,8 +41,8 @@ a {
 }
 
 .productsMain {
-  text-align: left;
-  background-color: 333333;
+  text-align: center;
+  background-color: #535353;
   padding: 10px;
   margin: 0;
   font-weight: 500;
@@ -48,11 +52,23 @@ a {
 
 
 
-/******************Launch Index******************************/
+/******************Products page******************************/
 
 .launchPics {
   width: 285px;
 
+}
+
+.runningTitle {
+  text-align: center;
+  background-color: #535353;
+  color: white;
+  padding: 14px;
+  margin: 0;
+  font-weight: 500;
+  font-family: Anisette Std Light;
+  font-size: 50px;
+  
 }
 
 ul {
@@ -60,7 +76,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333333;
+  background-color: #535353;
 }
 
 li {
@@ -73,14 +89,27 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 16px;
+  padding: 14px;
   text-decoration: none;
+  border: black;
+  border-width: 2px;
+  border-style: solid;
+  margin-bottom: 15px;
 }
 
 li a:hover {
-  background-color: #464646;
+  background-color: #3f3f3f;
 }
 
 .wrapperLI {
-  background-color: #333333;
+  background-color: #535353;
+}
+
+.launchHeader {
+  margin-top: 0px;
+  
+}
+
+.price {
+  display: inline;
 }
