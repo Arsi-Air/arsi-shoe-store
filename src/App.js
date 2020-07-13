@@ -1,10 +1,10 @@
 import React from 'react';
+import imgLogo from './logo.png';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link, Outlet, useParams } from 'react-router-dom';
 
 import { Shoes } from './components/Shoes/Shoes';
 import { Home } from './components/Home/Home';
-import {  } from './components/LaunchIndex/LaunchIndex';
 import { NotFound } from './components/NotFound/NotFound';
 
 
@@ -15,7 +15,8 @@ function App() {
   return (
     <Router>
       <nav>
-        <Link to="/">Home</Link>
+      <img className="imgLogo" src={imgLogo} alt="Arsi logo" />
+        <Link to="/" className="navHome" >Home</Link>
         <Link to="/launch">Products</Link>
         sdsdsda
       </nav>
@@ -47,12 +48,15 @@ const LaunchIndex = () => {
     <div className="wrapperLI">
     <p className="runningTitle">Running Shoes</p>
     <ul>
-      {Object.entries(Shoes).map(([slug, { name, img, price }]) => (
+      {Object.entries(Shoes).map(([slug, { name, img, price, stock }]) => (
         <li className="launchShoes" key={slug}>
           <Link to={`/launch/${slug}`}>
             <img className="launchPics" src={img} alt={name} />
             <h3 className="launchHeader">{name}</h3>
+            <div className="underImage">
+            <p className="stock">{stock} left in stock</p>
             <p className="price">USD {price}</p>
+            </div>
           </Link>
         </li>
       ))}
@@ -71,12 +75,25 @@ const LaunchShoe = () => {
     
   }
 
-  const { name, img } = shoe;
+  const { name, img, img2 } = shoe;
 
   return (
     <div>
-      <h2>{name}</h2>
-      <img src={img} alt={name} />
+      <h2 className="prodHeader">{name}</h2>
+      {/* <table className="prodDescTable" >
+      <tr> */}
+      {/* <td> */}
+      <div className="prodDivMain">
+      <div className="prodDiv">
+      <img className="prodPageImg" src={img} alt={name} />
+      {/* </td> */}
+      {/* <td> */}
+      <img className="prodPageImg" src={img2} alt={name} />
+      </div>
+      </div>
+      {/* </td> */}
+      {/* </tr>
+      </table> */}
       </div>
   );
 }
