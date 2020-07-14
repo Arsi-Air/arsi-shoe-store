@@ -36,7 +36,7 @@ export const Shoes = {
     stock: 7,
     img2: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/1eeaeea6-1449-4760-a05a-2b72aabcd7da/react-phantom-run-flyknit-2-running-shoe-Djlst6.jpg"
   },
-  "nike-react-Infinity-Run-Flyknit": {
+  "nike-react-infinity-run-flyknit": {
     name: "React Infinity Run Flyknit",
     img:
       "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/05c38a6c-3059-487f-8143-1b73344fdfbb/react-infinity-run-flyknit-running-shoe-WMtrNz.jpg",
