@@ -75,7 +75,7 @@ const LaunchShoe = () => {
     
   }
 
-  const { name, img, img2 } = shoe;
+  const { name, img, img2, desc } = shoe;
 
   return (
     <div>
@@ -90,6 +90,7 @@ const LaunchShoe = () => {
       {/* <td> */}
       <img className="prodPageImg" src={img2} alt={name} />
       </div>
+      <div className="prodPageText">{ desc }</div>
       </div>
       {/* </td> */}
       {/* </tr>

@@ -1,6 +1,6 @@
 import React from "react";
 import SimpleImageSlider from "react-simple-image-slider";
-import { Shoes } from "../Shoes/Shoes";
+// import { Shoes } from "../Shoes/Shoes";
 
 const ab = [0, 1, 2, 3, 4];
 console.log(ab[1]);
@@ -37,13 +37,13 @@ export const Home = () => {
     },
     {
       url:
-        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/3ecb7f95-263e-4620-875e-ce46ad5b4daa/pegasus-trail-2-trail-running-shoe-ZCfbql.jpg",
+        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cf42fe30-7c78-45b5-87bb-8ed11429faec/pegasus-trail-2-trail-running-shoe-ZCfbql.jpg",
     },
   ];
   return (
     <div className="home">
       <div className="imageSlider">
-        <div className="text">dswdddswddswsdswddswsdsddsdsdsdsdswsdsddsdsdsdsdswddswsdsddsdsdsdsdswsdsddsdsdsdsdswddswsdsddsdsdsdsdswsdsddsdsdsdsdswddswsdsddsdsdsdsdswsdsddsdsdsdsdsddsdsdsdsdswsdsddsdsdsdsdswddswsdsddsdsdsdsdswsdsddsdsdsdsswsdsddsdsdsdss</div>
+        <div className="text">Our mission is what drives us to do everything possible to expand human potential. We do that by creating groundbreaking sport innovations, by making our products more sustainably, by building a creative and diverse global team and by making a positive impact in communities where we live and work.</div>
         <SimpleImageSlider
           className="imageSliderActual"
           width={400}

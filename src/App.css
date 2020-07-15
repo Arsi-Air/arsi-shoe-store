@@ -157,10 +157,18 @@ li a:hover {
   border-style: solid;
   position: relative;
   left: 10%;
+  margin-top: 20px;
 }
 
 .prodDivMain {
   display: inline;
+}
+
+.prodPageText {
+  position: absolute;
+  left: 768px;
+  top: 164px;
+  color: white;
 }
 
 /***************************Home**************************/
@@ -176,6 +184,8 @@ li a:hover {
   color: white;
   position: absolute;
   left: 0;
-  max-width: 490px;
+  max-width: 440px;
   word-wrap: break-word;
+  padding-left: 50px;
+  font-size: larger;
 }
