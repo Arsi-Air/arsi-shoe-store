@@ -18,7 +18,6 @@ function App() {
       <img className="imgLogo" src={imgLogo} alt="Arsi logo" />
         <Link to="/" className="navHome" >Home</Link>
         <Link to="/launch">Products</Link>
-        sdsdsda
       </nav>
 
       <Routes>
